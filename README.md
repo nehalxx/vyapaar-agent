@@ -51,4 +51,5 @@ full feature set. See project roadmap for build order.
 
 ## Team
 
-[Add team member names here]
+Nehal katlana
+Ilisha shah
