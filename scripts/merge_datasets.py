@@ -1,3 +1,7 @@
+   # NOTE: superseded by generate_synthetic_data.py
+   # This script's direct merge produced a scale/density mismatch between
+   # 2023 and 2024 sources. Kept for reference/provenance — not used in
+   # the final pipeline.
 import pandas as pd
 from pathlib import Path
 

@@ -1,4 +1,8 @@
 import { useEffect, useState } from 'react';
+import SalesTrend from './SalesTrend';
+
+// inside your App component's return, above or below the existing table:
+
 
 function App() {
   const [transactions, setTransactions] = useState([]);
@@ -35,7 +39,9 @@ function App() {
           ))}
         </tbody>
       </table>
+      <SalesTrend />
     </div>
+    
   );
 }
 
