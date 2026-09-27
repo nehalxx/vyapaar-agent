@@ -18,16 +18,13 @@ merchants would need to provide separately.
 
 ## Features
 
-- **Sales trend visualization** — line graph of sales over time
-- **Low vs. high sales days** — filterable by week/month/year, sorted
-- **Cash flow forecasting** — linear regression (built from scratch, no inbuilt ML
-  libraries)
-- **Rent & bill tracking with reminders** — rule-based due-date monitoring
-- **Peak/off-peak sales hours** — k-means clustering (built from scratch)
-- **Discount suggestions** — statistical thresholds + business rules based on average
-  purchase behavior
-- **Safe spend estimate** — combines forecasted inflow, known fixed costs, and a buffer
-  to flag safe discretionary spend
+- **Sales trend visualization** — Line graph of sales over time to show whether the business is growing, flat, or declining.
+- **Low vs. high sales days** — Ranks days by sales volume (filterable by week/month/year) so merchants can spot and act on weak days.
+-** Cash flow forecasting** — Predicts expected future inflow using a from-scratch linear regression model on time-based sales patterns.
+-** Rent & bill tracking with reminders **— Tracks recurring expenses and proactively reminds merchants before due dates.
+- **Peak/off-peak sales hours** — Uses from-scratch k-means clustering to identify natural high- and low-activity time windows during the day.
+-** Discount suggestions** — Recommends a personalized discount threshold based on the merchant's own typical purchase size, not a fixed amount.
+- **Safe spend estimate** — Combines forecasted inflow, known bills, and a safety buffer into one clear "safe to spend" number.
 
 ## Tech Stack
 
