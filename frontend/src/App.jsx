@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import SalesTrend from './SalesTrend';
+import SalesByPeriod from './SalesByPeriod';
+
+// in the return, alongside SalesTrend:
 
 // inside your App component's return, above or below the existing table:
 
@@ -40,6 +43,7 @@ function App() {
         </tbody>
       </table>
       <SalesTrend />
+      <SalesByPeriod />
     </div>
     
   );

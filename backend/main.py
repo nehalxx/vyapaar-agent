@@ -34,3 +34,23 @@ def get_sales_trend():
     daily_sales['date'] = daily_sales['date'].astype(str)
 
     return daily_sales.to_dict(orient='records')
+
+@app.get("/api/sales-by-period")
+def get_sales_by_period(period: str = "day"):
+    df = pd.read_csv("../data/processed/unified_transactions.csv")
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+
+    if period == "day":
+        df['group'] = df['timestamp'].dt.day_name()
+    elif period == "month":
+        df['group'] = df['timestamp'].dt.month_name()
+    elif period == "year":
+        df['group'] = df['timestamp'].dt.year.astype(str)
+    else:
+        return {"error": "invalid period, use day/month/year"}
+
+    grouped = df.groupby('group')['amount'].sum().reset_index()
+    grouped.columns = ['label', 'total_sales']
+    grouped = grouped.sort_values('total_sales', ascending=True)  # ascending = low to high
+
+    return grouped.to_dict(orient='records')
